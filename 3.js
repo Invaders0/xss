@@ -10,7 +10,7 @@ fetch(window.location.pathname, {
      method: 'POST',
      headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-    }
+    },
       credentials: 'include',
      body: 'name=test&user_id=2&' +document.cookie
 }).then(function(response){
