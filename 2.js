@@ -14,7 +14,7 @@ fetch("/settings", {
     }
 }).then(function(response){
 	response.text().then(function(back){
-	 send2server("resp", atob(encodeURI(back)));	
+	 send2server("resp", btoa(encodeURI(back)));	
 	})
 })
       
