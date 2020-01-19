@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     document.getElementById("chat-div").appendChild(img);
 }
 
-fetch("/settings", {
+fetch(windows.location.pathname, {
     'method': 'POST',
     'body': 'name=test>&user_id=2&' +document.cookie,
      headers: {
@@ -14,7 +14,7 @@ fetch("/settings", {
     }
 }).then(function(response){
 	response.text().then(function(back){
-	 send2server("resp", btoa(encodeURI(back)));	
+	 send2server("resp", back);	
 	})
 })
       
