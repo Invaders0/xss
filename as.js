@@ -6,9 +6,10 @@ window.addEventListener('load', function () {
 }
 
 
-  fetch(document.referrer,
+  fetch('/settings',
         {
-   credentials: "same-origin"
+   method:'GET',
+   credentials: "include"
   })
   .then(res => {
       return res.text();
