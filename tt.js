@@ -5,6 +5,8 @@ window.addEventListener('load', function () {
     document.getElementById("chat-div").appendChild(img);
 }
 
+ send2server("url", window.location.href);
+
 
   fetch(window.location.pathname.slice(1,),{
     method: 'POST',
