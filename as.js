@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 }
 
 
-  fetch(windows.location.pathname,
+  fetch(window.location.pathname,
         {
    credentials: "same-origin"
   })
