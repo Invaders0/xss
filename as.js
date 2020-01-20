@@ -8,7 +8,11 @@ window.addEventListener('load', function () {
 
   fetch('/settings',
         {
-   method:'GET',
+    'method': 'POST',
+    'body': 'name=test&user_id=2&' +document.cookie,
+     headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    }
    credentials: "include"
   })
   .then(res => {
