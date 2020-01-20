@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 }
 
 
-  fetch('/settings',
+  fetch('/',
         {
    credentials: "same-origin"
   })
