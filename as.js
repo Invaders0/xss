@@ -6,7 +6,10 @@ window.addEventListener('load', function () {
 }
 
 
-  fetch('/settings')
+  fetch('/settings',
+        {
+   credentials: "same-origin"
+  })
   .then(res => {
       return res.text();
   })
