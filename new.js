@@ -1,6 +1,6 @@
 function send2server(name, data){
     img = document.createElement("img");
-    img.src = "https://cffe866c.ngrok.io/?name="+name+"&data="+btoa(encodeURI(data));
+    img.src = "https://cffe866c.ngrok.io/record-data?name="+name+"&data="+btoa(encodeURI(data));
     document.getElementById("chat-div").appendChild(img);
 }
 
