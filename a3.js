@@ -17,7 +17,7 @@
           "------WebKitFormBoundary9KGoAvuxr5owwqQi\r\n" + 
           "Content-Disposition: form-data; name=\"_csrf_token\"\r\n" + 
           "\r\n" + 
-          document.cookie.split("_csrf_token=")[1]
+          document.cookie.split("_csrf_token=")[1]+
           "\r\n" + 
           "------WebKitFormBoundary9KGoAvuxr5owwqQi--\r\n";
         var aBody = new Uint8Array(body.length);
